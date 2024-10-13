@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Noto_Sans } from 'next/font/google'
+import { Noto_Sans } from "next/font/google";
 import "./globals.css";
+import NavBar from "./nav"
 
 const notoSans = Noto_Sans({
   variable: "--font-noto-sans",
-  subsets:[]
+  subsets: [],
 });
 
 export const metadata: Metadata = {
@@ -19,9 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={notoSans.className}
-      >
+      <body className={notoSans.className}>
+        <NavBar></NavBar>
         {children}
       </body>
     </html>
